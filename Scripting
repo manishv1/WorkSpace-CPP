@@ -1,0 +1,3 @@
+Add : #!/bin/bash   at top of your script : so taht you don't need to write sh/bash before executing'
+And make your file executable (chmod +x script.sh).
+export PATH=$PATH:/appropriate/directory  : typically, you want $HOME/bin for storing your own scripts
