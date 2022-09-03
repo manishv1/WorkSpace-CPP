@@ -10,7 +10,11 @@ void printArray(int A[], int size)
 		cout << A[i] << " ";
 	cout << endl;
 }
+void t()
+{
 
+	
+}
 /* Function to reverse an array. An array can be
 reversed in O(n) time and O(1) space. */
 void reverse(int arr[], int l, int r)
