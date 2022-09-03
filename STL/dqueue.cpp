@@ -4,7 +4,7 @@
 
 
 // Other Ways to Create a C++ Deque8
-// fill constructor
+/e fill constructor
 //Here, we have initialized a deque of size 5 with values 12
 //deque<int> deque1(5, 12);
 //This is equivalent to
