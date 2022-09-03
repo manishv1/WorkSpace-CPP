@@ -10,7 +10,7 @@ class Solution {
 public:
     vector<int> twoSum(vector<int>& nums, int target) {
         
-        unordered_map <int int >   arr_map;
+        unordered_map <int, int >   arr_map;
         int k = 0;
         std::vector<int>::iterator it;
 
@@ -19,13 +19,13 @@ public:
 
                 k = target - nums[i];
                 it = std::find (nums.begin(), nums.end(), k);
-                if (it != vec.end())
+                if (it != nums.end())
                 {
                     cout<< "No match for "<< nums[i];
                 } 
                 else {
 
-                    cout<<"Match found for "<< num[i]<<"and match is"<< *it<<endl;
+                    cout<<"Match found for "<< nums[i]<<"and match is"<< *it<<endl;
                 }
         }
     }
@@ -36,7 +36,7 @@ int main()
     int len = sizeof(arr)/sizeof(arr[0]);
     for(int i = 0; i < len ; ++i){
 
-        arr_map[i]++,
+        arr_map[i]++;
     }
 
     for(auto x : arr_map)
