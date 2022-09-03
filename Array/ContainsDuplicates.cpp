@@ -34,7 +34,8 @@ class Solution1
         {
 
             unordered_map<int , int > m;
-            cout<<m[1]<<endl;
+            m.emplace(10,10);
+            cout<<m[10]<<endl;
         }
 
 
