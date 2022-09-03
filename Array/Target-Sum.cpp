@@ -15,8 +15,8 @@ public:
         std::vector<int>::iterator it;
         
         
+        // Commetns needs to be added 
 
-        
         for( int i = 0 ; i < nums.size(); i++ ){
 
                 k = target - nums[i];
