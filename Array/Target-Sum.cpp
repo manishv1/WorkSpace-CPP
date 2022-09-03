@@ -2,7 +2,7 @@
 #include <unordered_map>
 using namespace std;
  
-
+    
   int arr[] = { 1, -4, 45, 6, 10, 8 };
  unordered_map< int, int> arr_map;
 
@@ -13,8 +13,8 @@ public:
         unordered_map <int, int >   arr_map;
         int k = 0;
         std::vector<int>::iterator it;
-
-
+        
+        
         for( int i = 0 ; i < nums.size(); i++ ){
 
                 k = target - nums[i];
@@ -34,6 +34,8 @@ public:
 int main()
 {
     int len = sizeof(arr)/sizeof(arr[0]);
+
+    
     for(int i = 0; i < len ; ++i){
 
         arr_map[i]++;
