@@ -26,6 +26,9 @@ int main(){
     cout << "\nOutput of crbegin and crend : ";
     for (auto ir = g1.crbegin(); ir != g1.crend(); ++ir)
         cout << *ir << " ";
-  
+
+
+    vector<int>  v;
+    v.assign(7,100);  // Assign 100 to first 7 element 
     return 0;
 }
