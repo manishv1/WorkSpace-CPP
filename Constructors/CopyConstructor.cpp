@@ -18,7 +18,14 @@ class CCTest
                 v.push_back(i);
             }
         }
-
+          /*  When we have members which dynamically get initialized at run time, 
+            the default copy constructor copies this member with the address of dynamically
+            allocated memory and not a real copy of this memory.
+            Now, both the objects point to the same memory, and changes in one reflects in another object.
+            Further, the main disastrous effect is, when we delete one of these objects another object
+            still points to the same memory, which will be a dangling pointer, and memory leak is also 
+            a possible problem with this approach.
+        */ 
         CCTest(const CCTest &obj){
             std::cout << "Copy Constructor of CCTest Called" << std::endl;    
             a = obj.a;
@@ -27,7 +34,9 @@ class CCTest
         }
 
 
-        // Allocating memeory to Vector in Constructor 
+        // Allocating memeory to Vector in Constructor
+
+      
 
         void print()
         {
