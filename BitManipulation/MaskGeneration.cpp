@@ -13,6 +13,7 @@ int main()
     int n = 0;
     int b = 1;
     bitset<8> bit;
+    // Setting odd bits to one
     while( i < 5){
 
         n |= 1 << i;
