@@ -231,5 +231,24 @@
 			  "}"
 			],
 			"description": "Print function MV"
-		  }
+		  },
+		    "class node MV": {
+			"prefix": "class node",
+			"body": [
+				"class node",
+				"{",
+				"    public:",
+				"        int data;",
+				"        node *lc;",
+				"        node *rc;",
+				"   ",
+				"        node(int data){",
+				"            this->data = data;",
+				"            lc = NULL;",
+				"            rc = NULL;",
+				"        }    ",
+				"};"
+			],
+			"description": ""
+			}
 	  }
