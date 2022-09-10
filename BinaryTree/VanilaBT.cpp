@@ -2,7 +2,7 @@
 using namespace std;
  
 
-
+// Vanial Binary Tree Creation 
 
 
 class node
