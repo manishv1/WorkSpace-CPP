@@ -2,10 +2,10 @@
 using namespace std;
  
 
-// Vanial Binary Tree Creation 
+// Vanila Binary Tree Creation 
 
 
-class node
+struct node
 {
     public:
         int data;
@@ -48,9 +48,6 @@ void inorder(node *root){
       inorder(root->rc);
 }
 
-
-
- 
  
 int main()
 {
