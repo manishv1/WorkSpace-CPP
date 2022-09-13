@@ -52,9 +52,10 @@ void levelTraversal(node *root)
         node *tmp = q.front();
         q.pop();
         cout<<"  "<<tmp->data;
-        if(tmp->lc != NULL )
+        if(tmp->lc!= NULL )
             q.push(tmp->lc);
-        if(tmp->rc != NULL);
+
+        if(tmp->rc != NULL)
             q.push(tmp->rc);
    } 
 }
@@ -65,12 +66,12 @@ int main()
     node *root;
 
     root = insert(root,500);
-  //  root = insert(root,400);
-   // root = insert(root,1000);
-//    root = insert(root,300);
-//    root = insert(root,450);
-//    root = insert(root,600);
-//    root = insert(root,1200);
+    root = insert(root,400);
+    root = insert(root,1000);
+    root = insert(root,300);
+    root = insert(root,450);
+    root = insert(root,600);
+    root = insert(root,1200);
  
 //    inorder(root);
     levelTraversal(root);
