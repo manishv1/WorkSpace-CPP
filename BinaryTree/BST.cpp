@@ -59,11 +59,52 @@ void levelTraversal(node *root)
             q.push(tmp->rc);
    } 
 }
+
+int itrBT_Height(node *root)
+{
+    queue<node*> q;
+    int height = 0;
+    int sz;
+    q.push(root);
+    while(!q.empty())
+    {
+        ++height;
+        sz = q.size();
+        while(sz--)
+        {
+            //Add childs of node
+            node *f = q.front();
+            if(f->lc) q.push(f->lc);
+            if(f->rc) q.push(f->rc);
+            q.pop();
+        }
+
+    }
+    return height;
+}
+
+
+
+
+int height(node *root)
+{
+
+    if(root == NULL){
+        return 0;  // NULL Tree --> Height 0
+    }
+    int lc = height(root->lc);
+    int rc = height(root->rc);
+
+    return  max(lc,rc)+1;
+}
  
+
+
+
 int main()
 {
 
-    node *root;
+    node *root = NULL;
 
     root = insert(root,500);
     root = insert(root,400);
@@ -72,8 +113,12 @@ int main()
     root = insert(root,450);
     root = insert(root,600);
     root = insert(root,1200);
+    root = insert(root,1201);
+    root = insert(root,1205);
  
 //    inorder(root);
-    levelTraversal(root);
+//    levelTraversal(root);
+      cout<<endl<<"..."<<height(root)<<endl;
+
     return 0;
 }
