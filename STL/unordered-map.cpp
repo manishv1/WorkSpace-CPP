@@ -5,7 +5,7 @@ using namespace std;
  
 // note negative values are also stored, map stores the " <KEY>  , <VALUE>"  pair so I think negative does not matter 
 
-  int arr[] = { -1, 2, 45, 6, 10, 8 };
+  int arr[] = { 1, 2, 45, 6, 10, 8 ,1,1,1};
   
 unordered_map< int, int> arr_map;
 //map< int, int> arr_map;
@@ -16,7 +16,7 @@ int main()
     int len = sizeof(arr)/sizeof(arr[0]);
     for(int i = 0; i < len ; ++i){
 
-        arr_map[arr[i]] = arr[i];
+        arr_map[arr[i]]++;
     }
 
     for(auto x : arr_map)
