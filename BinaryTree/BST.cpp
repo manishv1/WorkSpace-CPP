@@ -118,6 +118,8 @@ node *searchBST(node *root, int data){
 
          return searchBST(root->rc,data);
      }
+
+     return NULL;
      
     }
 
@@ -138,9 +140,10 @@ int main()
  
       inorder(root);
 //    levelTraversal(root);
-      if(searchBST(root,450))
+      node *t = searchBST(root,1205);
+      if(t)
       {
-        std::cout <<"..."<< root->data << std::endl;
+        std::cout <<"..."<< t->data << std::endl;
 
       }  
       else{
