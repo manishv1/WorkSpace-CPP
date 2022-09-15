@@ -99,7 +99,27 @@ int height(node *root)
 }
  
 
+node *searchBST(node *root, int data){
 
+     if(root == NULL){
+        return NULL;
+     }
+     if( data == root->data )
+     {
+        return root;
+     }
+
+     if(data < root->data){
+
+        return searchBST(root->lc,data);
+     }
+
+     if(data > root->data){
+
+         return searchBST(root->rc,data);
+     }
+     
+    }
 
 int main()
 {
@@ -116,9 +136,18 @@ int main()
     root = insert(root,1201);
     root = insert(root,1205);
  
-//    inorder(root);
+      inorder(root);
 //    levelTraversal(root);
-      cout<<endl<<"..."<<height(root)<<endl;
+      if(searchBST(root,450))
+      {
+        std::cout <<"..."<< root->data << std::endl;
+
+      }  
+      else{
+
+        std::cout << "No Data Element" << std::endl;
+      }
+//    cout<<endl<<"..."<<height(root)<<endl;
 
     return 0;
 }

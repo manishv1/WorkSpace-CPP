@@ -61,6 +61,9 @@ void bstLevel(node *root)
          if(f->lc)
             q.push(f->lc);
          if(f->rc)
+            q.push(f->rc);
+      }
+}
  
 int main()
 {
