@@ -21,10 +21,27 @@ void inorder(node * root){
     if(root == NULL)
         return;
     inorder(root->lc);
-    std::cout << root->data << std::endl;
+    std::cout << root->data <<", ";
     inorder(root->rc);
 }
- 
+
+
+// Post order traversal 
+
+void postorder(node *root)
+{
+
+    if(root == NULL ){
+
+        return ;
+    }
+
+    postorder(root->lc);
+    postorder(root->rc);
+    std::cout << root->data << std::endl;
+
+
+}
 
 node *insert(node *root,int data)
 {
@@ -43,6 +60,21 @@ node *insert(node *root,int data)
 
 }
 
+// CLone a Tree 
+
+node *cloneTree(node *root){
+
+
+    if(root == NULL)
+        return NULL;
+
+    node *cloneRoot = new node(root->data);
+    cloneRoot->lc = cloneTree(root->lc);
+    cloneRoot->rc = cloneTree(root->rc);
+    return cloneRoot;
+}
+
+
 void levelTraversal(node *root)
 {
    queue<node *> q; 
@@ -57,8 +89,25 @@ void levelTraversal(node *root)
 
         if(tmp->rc != NULL)
             q.push(tmp->rc);
-   } 
+   }
+
+   std::cout << endl << endl << std::endl; 
 }
+// mirror a binary tree 
+
+void mirror(node *root)
+{
+    if(root == NULL)
+        return;
+
+    mirror(root->lc);
+    mirror(root->rc);
+    swap(root->lc, root->rc);
+
+}
+
+// Duplicate a Tree 
+
 
 int itrBT_Height(node *root)
 {
@@ -125,6 +174,7 @@ int main()
 {
 
     node *root = NULL;
+    node *tmp = NULL;
 
     root = insert(root,500);
     root = insert(root,400);
@@ -136,19 +186,13 @@ int main()
     root = insert(root,1201);
     root = insert(root,1205);
  
-      inorder(root);
-//    levelTraversal(root);
-      node *t = searchBST(root,450);
-      if(t)
-      {
-        std::cout <<"..."<< t->data << std::endl;
-
-      }  
-      else{
-
-        std::cout << "No Data Element" << std::endl;
-      }
-//    cout<<endl<<"..."<<height(root)<<endl;
-
-    return 0;
+//    inorder(root);
+      levelTraversal(root);
+//    int t = height(root);
+//    mirror(root);
+//    cout<<endl<<endl;
+      node *cloneRoot = cloneTree(root);
+      levelTraversal(cloneRoot);
+      cout<<endl<<endl;
+      return 0;
 }
