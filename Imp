@@ -1,1 +1,2 @@
 g++ filename.cpp –o filename   : Executeable will be generated with file name 
+ctrl+shift+z  : Zen mode full screen mode  
