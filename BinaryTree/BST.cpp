@@ -132,7 +132,13 @@ int itrBT_Height(node *root)
     return height;
 }
 
+//Create Tree from Array
+node *TreeFromArray(node *root, vector<int> v)
+{
 
+
+
+}
 
 
 int height(node *root)
