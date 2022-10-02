@@ -1,5 +1,6 @@
 "is used for comment
 set ve+=onemore
+set mouse=a
 set number
 set noerrorbells
 set title
