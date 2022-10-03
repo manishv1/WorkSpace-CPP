@@ -232,23 +232,31 @@
 			],
 			"description": "Print function MV"
 		  },
-		    "class node MV": {
+		    "class Node MV": {
 			"prefix": "class node",
 			"body": [
-				"class node",
+				"class Node",
 				"{",
 				"    public:",
 				"        int data;",
-				"        node *lc;",
-				"        node *rc;",
+				"        Node *left;",
+				"        Node *right;",
 				"   ",
-				"        node(int data){",
+				"        Node(int data){",
 				"            this->data = data;",
-				"            lc = NULL;",
-				"            rc = NULL;",
+				"            left = NULL;",
+				"            right = NULL;",
 				"        }    ",
 				"};"
 			],
 			"description": ""
-			}
+			},
+
+			"Vector-Array": {
+ 			"prefix": "array",
+  			"body": [
+   					 "vector<int> v = { 1,2,3,4,5,6,7};"
+  					],
+  			"description": "Vector-Array"
+}
 	  }
