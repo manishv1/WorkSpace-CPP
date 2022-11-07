@@ -16,8 +16,8 @@ class node
         }    
 };
 
-void inorder(node * root){
 
+void inorder(node * root){
     if(root == NULL)
         return;
     inorder(root->lc);
@@ -26,8 +26,8 @@ void inorder(node * root){
 }
 
 
-// Post order traversal 
 
+// Post order traversal 
 void postorder(node *root)
 {
 
@@ -39,9 +39,9 @@ void postorder(node *root)
     postorder(root->lc);
     postorder(root->rc);
     std::cout << root->data << std::endl;
-
-
 }
+
+
 
 node *insert(node *root,int data)
 {
@@ -57,8 +57,8 @@ node *insert(node *root,int data)
         root->rc = insert(root->rc,data);
     }
     return root;
-
 }
+
 
 // CLone a Tree 
 
