@@ -1,6 +1,6 @@
 {
 	"C++ Competitive Format Block": {
-		"prefix": "main",
+		"prefix": "#include",
 		"body": [
 			"#include<bits/stdc++.h>",
 			"using namespace std;",
@@ -10,7 +10,7 @@
 			" ",
 			" ",
 			" "
-			"int, main()",
+			"int main()",
 			"{",
 			"    $1",
 			" ",
