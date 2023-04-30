@@ -258,5 +258,28 @@
    					 "vector<int> v = { 1,2,3,4,5,6,7};"
   					],
   			"description": "Vector-Array"
-           }
+           },
+		   
+		   "random_array": {
+			"prefix": "random_array",
+			"body": [
+			  "int arr[10]",
+			  "for (int i = 0; i < 10; ++i){",
+			  "arr[i] = rand()%10;",
+			  "}"
+			],
+			"description": "random_array"
+		  },
+
+		  "print-array": {
+			"prefix": "print-array",
+			"body": [
+			  "for (int i = 0; i < 10; ++i)",
+			  "{",
+			  "cout << arr[i] << endl;",
+			  "",
+			  "}"
+			],
+			"description": "print-array"
+		  }
 	  }
