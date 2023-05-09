@@ -65,12 +65,12 @@ vector<int> inOrder(Node *node)
     inOrder(node->right);
     return inNode;
 }
-
 //  Modified Coding block code
-void printLevelByLevel1(Node *root)
+void printLevelByLevel(Node *root)
 {
     queue<Node *> q;
     q.push(root);
+
     int level = 0;
     while (!q.empty())
     {
@@ -91,6 +91,35 @@ void printLevelByLevel1(Node *root)
         }
     }
 }
+// Coding Block Code :pritn level order line by line  
+void LevelOrderTraversal1(Node *root)
+{
+    queue<Node*> q;
+    q.push(root);
+    q.push(NULL);
+    while(q.size() > 1)
+    {
+        Node *n = q.front();
+        q.pop();
+        if( n == NULL) 
+        {
+            q.push(NULL);
+            cout<<endl;
+        }
+        else 
+        {
+            cout<< n->data<<"  ";
+            if(n->left)
+                q.push(n->left);
+            
+            if(n->right)
+                q.push(n->right);
+                
+        }
+    }
+}
+ 
+ 
 // print node at nth level
 void print_Nth_Level(Node *root, int n)
 {
@@ -174,9 +203,9 @@ void printLeftView(Node *root)
         vector<int> v = {1, 2, 3, 4, 5, 6, 7, 8};
         // Node* root = createBST(v, 0, v.size() - 1);
         Node *root = insertLevelOrder(v, 0);
-        printLevelByLevel1(root);
+        LevelOrderTraversal1(root);
         cout<<endl<<endl;
-        printLeftView(root);
+     //   printLeftView(root);
         //print_Nth_Level(root,3);
         // preOrder(root);
         return 0;
