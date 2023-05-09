@@ -15,7 +15,28 @@ class Node
         }    
 };
 
- 
+ int idx = 0;
+vector<int> arr = { 4,5,7,-1,-1,-1,6,-1,8,10,-1,-1,-1};
+node* buildTree()
+{ 
+    int data;
+    //cin >> data;
+   
+    data = arr[idx];
+    idx++;
+   
+    if (data == -1)
+        return NULL;
+
+    node *root = new node(data);
+    if(idx < arr.size())
+    root->lc = buildTree();
+    if(idx < arr.size())
+    root->rc = buildTree();
+
+    return root;
+}
+
  Node *buildTree()
  {
         int d;

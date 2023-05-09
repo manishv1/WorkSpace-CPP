@@ -32,6 +32,22 @@ node* CreateTree(node *root, int s , int e)
     return root;
 }
 
+
+
+node* CreateTree1(int s , int e)
+{
+    if( s > e)
+    {
+        return NULL;
+    }
+    node *root = NULL;
+    int mid = (s+e)/2;
+    root = new node(v[mid]);
+    root->lc = CreateTree1(s, mid -1);
+    root->rc = CreateTree1(mid+1,e);
+    return root;
+}
+
 void levelTraversal(node *root)
 {
    queue<node *> q; 
@@ -58,7 +74,10 @@ int main()
     s = 0,
     e = v.size()-1;
     node *root = NULL;
-    root = CreateTree(root, s,e);    
+    root = CreateTree(root,0,0);
+    levelTraversal(root);
+    cout<<endl<<endl;
+    root = CreateTree1(s,e);    
     levelTraversal(root);
     return 0;
 }
