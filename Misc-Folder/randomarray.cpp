@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
  
- 
-int main()
+ ̥
+int main()̥̥
 {
     int arr[10]
     for (int i = 0; i < 10; ++i){
@@ -15,5 +15,5 @@ int main()
     
     }  
       
-     return 0;
+     return 0;̥̥̥
 }

@@ -16,7 +16,7 @@ class Node
 };
 
  int idx = 0;
-vector<int> arr = { 4,5,7,-1,-1,-1,6,-1,8,10,-1,-1,-1};
+vector<int> arr = { 4,5,7,-1,-1,-1,6,-1,8,10,-1,-1,-1}; 
 Node* buildTree1()
 { 
     int data;
@@ -57,7 +57,8 @@ Node* buildTree1()
     if( root == NULL)
     {
        
-        return;
+        return;  
+        // 
     }
 
     cout<<root->data<<" ";
@@ -65,7 +66,10 @@ Node* buildTree1()
     print(root->right);
  }    
 
- 
+ void printNodeAt-K-Distance()
+ {
+      node *root;   
+ }
  
 int main()
 {

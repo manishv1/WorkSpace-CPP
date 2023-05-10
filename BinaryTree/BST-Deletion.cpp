@@ -16,7 +16,7 @@ using namespace std;
          }    
  };
 
- vector<int> v = { 1,2,3,4,5,6,7};
+̥vector<int> v = { 1,2,3,4,5,6,7};
 
 
 node* CreateTree(node *root, int s , int e)
@@ -34,7 +34,7 @@ node* CreateTree(node *root, int s , int e)
 
 
 
-node* CreateTree1(int s , int e)
+node* CreateTree1(int s , int e)̥
 {
     if( s > e)
     {
@@ -45,10 +45,10 @@ node* CreateTree1(int s , int e)
     root = new node(v[mid]);
     root->lc = CreateTree1(s, mid -1);
     root->rc = CreateTree1(mid+1,e);
-    return root;
+    return root;̥
 }
 
-void levelTraversal(node *root)
+void levelTraversal(node *root)̥
 {
    queue<node *> q; 
    q.push(root);
@@ -64,13 +64,13 @@ void levelTraversal(node *root)
             q.push(tmp->rc);
    }
 
-   std::cout << endl << endl << std::endl; 
+   std::cout << endl << endl << std::endl; ̥
 }
  
 int main()
 {
     
-    int s,e;
+  ̥  int s,e;
     s = 0,
     e = v.size()-1;
     node *root = NULL;

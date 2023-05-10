@@ -24,7 +24,7 @@ void generateSubSets(char* arr, char* out, int idx, int o)
 	
 }
 
-void generateSubSets1(char *arr, char *out, int idx, int o)
+̥̥void generateSubSets1(char *arr, char *out, int idx, int o)
 {
 	
 	if (idx == 3) {
@@ -36,7 +36,7 @@ void generateSubSets1(char *arr, char *out, int idx, int o)
 
 		
 	out[o] = arr[idx];
-	generateSubSets1(arr, out, idx + 1, o+1);
+	̥̥generateSubSets1(arr, out, idx + 1, o+1);
 	generateSubSets1(arr, out, idx + 1, o);
 	
 		
