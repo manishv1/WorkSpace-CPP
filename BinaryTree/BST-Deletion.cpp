@@ -70,7 +70,7 @@ void levelTraversal(node *root)̥
 int main()
 {
     
-  ̥  int s,e;
+  int s,e;
     s = 0,
     e = v.size()-1;
     node *root = NULL;
