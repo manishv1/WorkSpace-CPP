@@ -65,7 +65,7 @@ void levelTraversal(node *root)̥
    }
 
    std::cout << endl << endl << std::endl; ̥
-}
+   }
  
 int main()
 {
